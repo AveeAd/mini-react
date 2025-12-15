@@ -11,3 +11,5 @@ declare namespace JSX {
     props: Props;
   }
 }
+
+const h = import("./src/package/component/h");

@@ -1,4 +1,3 @@
-import h from "../package/component/h";
 import useState from "../package/state/useState";
 
 export default function Button() {
