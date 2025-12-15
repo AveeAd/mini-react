@@ -4,6 +4,7 @@ import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import terser from '@rollup/plugin-terser';
 import pkg from "./package.json" with { type: "json" };
+import postcss from "rollup-plugin-postcss";
 
 import serve from 'rollup-plugin-serve';
 import livereload from 'rollup-plugin-livereload';
@@ -20,7 +21,12 @@ const plugins = [
 	typescript({
 		tsconfig: "tsconfig.json"
 	}),
-	terser()
+	terser(),
+	postcss({
+      extract: false,
+      modules: false,
+      inject: true,
+    }),
 ]
 
 if (isWatching) {
@@ -40,7 +46,7 @@ if (isWatching) {
 }
 
 export default defineConfig({
-	input: 'src/index.ts',
+	input: 'src/index.tsx',
 	plugins,
 	output: [{
 		file: `dist/${packageName}.esm.js`,

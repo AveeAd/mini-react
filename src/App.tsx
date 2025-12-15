@@ -1,7 +1,7 @@
-import Button from "./components/Button";
 import Counter from "./components/Counter";
 import Heading from "./components/Heading";
 import HeadingWrapper from "./components/HeadingWrapper";
+import h from "./package/component/h";
 
 export default function App() {
   
@@ -10,7 +10,6 @@ export default function App() {
       <HeadingWrapper>
         <Heading title="Hello World" />
       </HeadingWrapper>
-      <Button />
       <Counter />
     </div>
   )

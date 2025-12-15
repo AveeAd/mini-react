@@ -1,4 +1,4 @@
-import useState from "../package/state/useState";
+import h, { useState } from "../package";
 
 export default function Counter() {
   const [count, setCount] = useState(0);
