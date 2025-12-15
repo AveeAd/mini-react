@@ -1,4 +1,4 @@
-import useState from "../package/state/useState";
+import { useState } from "../package";
 
 export default function Button() {
   const [count, setCount] = useState(0);

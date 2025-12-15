@@ -1,5 +1,4 @@
 import App from "./App";
-import h from "./package/component/h";
-import renderer from "./package/renderer";
+import { createRoot } from "./package";
 
-renderer(<App />, "root");
+createRoot(<App />, "root");

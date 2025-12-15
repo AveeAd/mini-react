@@ -2,7 +2,6 @@ import Button from "./components/Button";
 import Counter from "./components/Counter";
 import Heading from "./components/Heading";
 import HeadingWrapper from "./components/HeadingWrapper";
-import h from "./package/component/h";
 
 export default function App() {
   
