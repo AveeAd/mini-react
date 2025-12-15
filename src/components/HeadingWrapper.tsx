@@ -1,0 +1,6 @@
+import h from "../package/component/h";
+import type { Props } from "../package/definitions/index.definition";
+
+export default function HeadingWrapper({ children }: Props) {
+  return <div className="heading-wrapper">{children}</div>
+}

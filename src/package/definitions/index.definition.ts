@@ -1,5 +1,7 @@
-export interface Props extends Record<string, any> {
+export interface Props {
   className?: string;
+  children?: Node[] | Node;
+  [key: string]: any;
 }
 
 export interface PropsWithChildren extends Props {
@@ -8,7 +10,7 @@ export interface PropsWithChildren extends Props {
 
 export interface Element {
   type: string | ((props: Props) => Element);
-  props: PropsWithChildren;
+  props: Props | PropsWithChildren;
 }
 
 export type Node = Element | string | number | boolean | null | undefined;
